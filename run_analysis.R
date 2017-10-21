@@ -63,7 +63,7 @@ xy_test_train_selected <- xy_test_train[,c(1, 2, selection)]
 
 mean_by_activity_and_subject <- group_by(xy_test_train_selected, Activity, Subject) %>% summarize_all(mean)
 
-write.table(mean_by_activity_and_subject, "set_mean.txt")
+write.table(mean_by_activity_and_subject, "set_mean.txt", row.name=FALSE)
 
 print(mean_by_activity_and_subject)
 
